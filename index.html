@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff5c93" />
+  <title>The Midterm Appreciation Club</title>
+  <link rel="preload" href="fonts/fraunces-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Cpath d='M60 16 74.1 46.6 107.6 50.5 82.8 73.4 89.4 106.5 60 90 30.6 106.5 37.2 73.4 12.4 50.5 45.9 46.6Z' fill='%23ff5c93' stroke='%234b1022' stroke-width='8' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <!-- Reusable sticker shapes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="gingham-pat" width="8" height="8" patternUnits="userSpaceOnUse">
+        <rect width="8" height="8" fill="#fff6e9" />
+        <rect width="4" height="8" fill="#ff5c93" opacity=".55" />
+        <rect width="8" height="4" fill="#ff5c93" opacity=".55" />
+      </pattern>
+      <symbol id="star" viewBox="0 0 120 120">
+        <path d="M60 16 74.1 46.6 107.6 50.5 82.8 73.4 89.4 106.5 60 90 30.6 106.5 37.2 73.4 12.4 50.5 45.9 46.6Z"
+              fill="currentColor" stroke="#4b1022" stroke-width="8" stroke-linejoin="round" />
+        <path d="M58 36 52 50 40 53 49 61" fill="none" stroke="#ffe1ea" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity=".9" />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 32 30">
+        <path d="M16 28C6 21 2 15 2 9.5 2 5.5 5.2 2.5 9 2.5c3 0 5.5 1.8 7 4.5 1.5-2.7 4-4.5 7-4.5 3.8 0 7 3 7 7C30 15 26 21 16 28Z"
+              fill="currentColor" stroke="#4b1022" stroke-width="2.2" stroke-linejoin="round" />
+        <path d="M7 8.5c.6-1.6 1.8-2.4 3.2-2.4" fill="none" stroke="#ffe1ea" stroke-width="2" stroke-linecap="round" />
+      </symbol>
+      <symbol id="mascot" viewBox="0 0 120 120">
+        <path d="M60 16 74.1 46.6 107.6 50.5 82.8 73.4 89.4 106.5 60 90 30.6 106.5 37.2 73.4 12.4 50.5 45.9 46.6Z"
+              fill="#ff6f9f" stroke="#4b1022" stroke-width="6" stroke-linejoin="round" />
+        <path d="M57 32 51 47 33 51" fill="none" stroke="#ffd3e1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="44" cy="72" r="5.5" fill="#ff3d7f" opacity=".55" />
+        <circle cx="76" cy="72" r="5.5" fill="#ff3d7f" opacity=".55" />
+        <g class="mascot-eyes" fill="#4b1022">
+          <ellipse cx="51" cy="63" rx="3.4" ry="4.2" />
+          <ellipse cx="69" cy="63" rx="3.4" ry="4.2" />
+        </g>
+        <path d="M54 71q6 6.5 12 0" fill="none" stroke="#4b1022" stroke-width="3.2" stroke-linecap="round" />
+        <g stroke="#4b1022" stroke-width="2.6" stroke-linejoin="round">
+          <path d="M60 21 46 12.5 47.5 29Z" fill="#fff6e9" />
+          <path d="M60 21 74 12.5 72.5 29Z" fill="#fff6e9" />
+          <circle cx="60" cy="21" r="4" fill="#ff3d7f" />
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <main class="sheet" id="app">
+
+    <!-- ============ SCREEN A — WELCOME ============ -->
+    <section class="screen screen--welcome is-active" id="screen-welcome" aria-labelledby="welcome-title">
+      <header class="masthead">
+        <span class="masthead__name">The Midterm Appreciation Club</span>
+        <span class="masthead__issue">Members: 1</span>
+      </header>
+
+      <div class="welcome-grid">
+        <div class="hero">
+          <svg class="sticker sticker--hero-star" aria-hidden="true"><use href="#star" /></svg>
+          <svg class="sticker sticker--hero-heart" aria-hidden="true"><use href="#heart" /></svg>
+
+          <div class="hero__label">
+            <p class="kicker">Official announcement</p>
+            <h1 class="headline" id="welcome-title" tabindex="-1">
+              <span class="headline__you">You</span>
+              <span class="headline__survived">survived</span>
+              <span class="headline__midterms">midterms!</span>
+            </h1>
+          </div>
+
+          <div class="stamp" aria-label="Exam season: completed">
+            <span class="stamp__top">Exam season</span>
+            <span class="stamp__main">Completed</span>
+            <span class="stamp__bottom">✓ Certified by the club</span>
+          </div>
+        </div>
+
+        <div class="welcome-side">
+          <div class="host">
+            <svg class="host__mascot" viewBox="0 0 120 120" aria-hidden="true"><use href="#mascot" /></svg>
+            <div class="bubble">
+              <p class="bubble__name"><span data-host-name></span>, club host</p>
+              <p>Hi Shania! Welcome to the Midterm Appreciation Club. Today’s meeting has exactly one item on the agenda: <em>you</em>.</p>
+            </div>
+          </div>
+
+          <p class="lede">Officially reporting for post-midterm recovery. Your only assignment now is to take a tiny break.</p>
+
+          <button class="btn btn--primary btn--big" type="button" id="btn-celebrate">
+            Let’s celebrate
+            <svg class="btn__icon" aria-hidden="true"><use href="#star" /></svg>
+          </button>
+
+          <p class="fineprint">Dues: none · Snacks: strongly encouraged</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN B — MINI-GAME ============ -->
+    <section class="screen screen--game" id="screen-game" aria-labelledby="game-title" hidden>
+      <header class="game-head">
+        <h2 class="game-title" id="game-title" tabindex="-1">Catch Your <em>Well-Deserved</em> Stars</h2>
+        <div class="hud">
+          <div class="chip">
+            <span class="chip__label">Stars</span>
+            <span class="chip__value" id="hud-score">0</span>
+          </div>
+          <div class="chip chip--time">
+            <span class="chip__label">Time</span>
+            <span class="chip__value"><span id="hud-time">18</span>s</span>
+          </div>
+        </div>
+        <div class="timebar" aria-hidden="true"><span id="timebar-fill"></span></div>
+      </header>
+
+      <div class="mc-line">
+        <svg class="mc-line__mascot" viewBox="0 0 120 120" aria-hidden="true"><use href="#mascot" /></svg>
+        <p class="mc-line__text" id="mc-text" aria-live="polite">Every star up there is yours to keep.</p>
+      </div>
+
+      <div class="stage" id="stage">
+        <canvas id="game-canvas" tabindex="0"
+                aria-label="Star catching game. Move the basket with your finger, mouse, or the left and right arrow keys."></canvas>
+
+        <!-- Intro overlay -->
+        <div class="overlay" id="overlay-intro">
+          <div class="panel">
+            <p class="kicker">How to play</p>
+            <h3 class="panel__title">Stars are falling. Go get them.</h3>
+            <ul class="howto">
+              <li><strong>Phone:</strong> drag your finger left and right.</li>
+              <li><strong>Laptop:</strong> move the mouse or use ← → keys.</li>
+              <li>18 seconds. No way to lose. Hearts count double.</li>
+            </ul>
+            <button class="btn btn--primary" type="button" id="btn-start">Start catching</button>
+          </div>
+        </div>
+
+        <!-- Results overlay -->
+        <div class="overlay" id="overlay-results" hidden>
+          <div class="panel panel--results">
+            <svg class="sticker sticker--panel" aria-hidden="true"><use href="#star" /></svg>
+            <p class="kicker">Time’s up!</p>
+            <h3 class="panel__title" id="results-title" tabindex="-1"></h3>
+            <p class="panel__text" id="results-text"></p>
+            <div class="btn-row">
+              <button class="btn btn--primary" type="button" id="btn-to-note">Open your note ♡</button>
+              <button class="btn btn--ghost" type="button" id="btn-replay">Play again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCREEN C — APPRECIATION NOTE ============ -->
+    <section class="screen screen--note" id="screen-note" aria-labelledby="note-title" hidden>
+      <h2 class="visually-hidden" id="note-title" tabindex="-1">A note for you</h2>
+
+      <div class="envelope-wrap" id="envelope-wrap">
+        <p class="kicker kicker--center">One more thing</p>
+        <p class="envelope-caption">There’s a letter for you.</p>
+        <div class="envelope" id="envelope">
+          <div class="envelope__back"></div>
+          <div class="envelope__peek"></div>
+          <div class="envelope__front"></div>
+          <svg class="envelope__flap" viewBox="0 0 100 58" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M2 1.2H98L50 56Z" fill="url(#gingham-pat)" stroke="#4b1022" stroke-width="2.5" stroke-linejoin="round" vector-effect="non-scaling-stroke" />
+          </svg>
+          <button class="seal" type="button" id="btn-open-letter" aria-label="Open the letter">
+            <svg aria-hidden="true"><use href="#heart" /></svg>
+          </button>
+        </div>
+        <p class="envelope-hint">Tap the seal to open</p>
+      </div>
+
+      <article class="letter" id="letter" hidden>
+        <span class="tape" aria-hidden="true"></span>
+        <svg class="sticker sticker--letter" aria-hidden="true"><use href="#heart" /></svg>
+        <p class="letter__greeting" id="letter-greeting"></p>
+        <div class="letter__body" id="letter-body"></div>
+        <p class="letter__closing" id="letter-closing"></p>
+        <p class="letter__signature" id="letter-signature"></p>
+      </article>
+
+      <div class="note-actions" id="note-actions" hidden>
+        <button class="btn btn--primary btn--big" type="button" id="btn-hug">Hug accepted</button>
+        <button class="btn btn--ghost" type="button" id="btn-play-again">Play again</button>
+        <p class="hug-msg" id="hug-msg" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <div class="burst-layer" id="burst-layer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
